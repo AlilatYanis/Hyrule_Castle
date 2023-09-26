@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "color": "^4.2.3",
+    "colors": "^1.4.0",
+    "node": "^18.10.0",
+    "readfilesync": "^1.1.5",
+    "readline-sync": "^1.4.10",
+    "require": "^0.4.4",
+    "string-progressbar": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.23"
+  }
+}
