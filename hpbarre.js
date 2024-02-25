@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 function hpbarre(hp, max) {
     var hp10 = hp / 10;
     var max10 = max / 10;
@@ -13,4 +13,4 @@ function hpbarre(hp, max) {
     }
     return { pv: pv, no: no };
 }
-exports["default"] = hpbarre;
+exports.default = hpbarre;

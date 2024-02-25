@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 function getRandom() {
     var num = Math.floor(Math.random() * 100);
     if (num < 50) {
@@ -16,4 +16,4 @@ function getRandom() {
     }
     return 5;
 }
-exports["default"] = getRandom;
+exports.default = getRandom;

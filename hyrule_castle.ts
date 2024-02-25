@@ -9,7 +9,11 @@ const readline = require('readline-sync');
 const fs = require('fs');
 
 let randomPlayer: number = getRandom();
+
+
 const rPlayer = fs.readFileSync("player.json",'utf-8')
+const rMonster = fs.readFileSync("enemies.json",'utf-8')
+const rBoss = fs.readFileSync("bosses.json",'utf-8')
 
 const playerName = JSON.parse(rPlayer);
 for(let i of playerName) {
@@ -17,22 +21,39 @@ for(let i of playerName) {
 		var joueur = i;
 	}
 }
+
+const monsterName = JSON.parse(rMonster);
+for(let i of monsterName) {
+	if(i.rarity === randomPlayer) {
+		var monstre = i;
+	}
+}
+
+const bossName = JSON.parse(rBoss);
+for(let i of bossName) {
+	if(i.rarity === randomPlayer) {
+		var bosse = i;
+	}
+}
+
 const player: Player = {
     name: joueur.name,
     hp: joueur.hp,
     str: joueur.str,
 };
 let playerhp = player.hp;
+
 const monster: Monster = {
-    name:'Bokoblin',
-    hp: 30,
-    str: 5,
+    name:monstre.name,
+    hp: monstre.hp,
+    str: monstre.str,
 }
 let monsterhp =monster.hp;
+
 const boss: Boss ={
-	name:'Ganon',
-	hp: 150,
-	str: 20,
+	name:bosse.name,
+	hp: bosse.hp,
+	str: bosse.str,
 }
 let bosshp = boss.hp
 
@@ -77,6 +98,7 @@ for (let i = 1 ; i < 10; i += 1){
 	}
 	
 console.log("✨Well Play you won✨");
+
 	function FIGHT(){ 
     const option = ['Attack Heal'];
 		console.log('---Option-------')
