@@ -1,7 +1,7 @@
 # Hyrule Castle
 
 ### How to run the code
-After clonning the repo you have to :
+After clonning the repo you have to compile with:
 - npm i
 
 Lets play with :
